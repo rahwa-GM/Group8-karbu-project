@@ -3,32 +3,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> 
+    <link rel="stylesheet" href="./css/sales.css">
   </head>
   <body>
     <!-- Sales Entry Form  -->
-    <h1>Sales Entry Form</h1>
+     <div class="bg"></div>
+  
+     <div class="form-container">
+    <h1>Sales Entry Form <i class="fa-solid fa-basket-shopping"></i></h1>
+       <div class="page-link">
+      <a href="procurement.html">Go to Procurement page <i class="fa-solid fa-arrow-right"></i></a>
+     </div> 
     <form action="">
       <fieldset>
         <legend>Sales Information</legend>
 
-        <label for="">Sale ID / Receipt Number</label>
-        <input type="text" name="" id="" readonly />
 
+<div class="form-group">
+        <label for="">Sale ID</label>
+        <input type="text" name="" id="" readonly /></div>
+
+        <div class="form-group">
         <label for="">Sale Date & Time</label>
-        <input type="datetime-local" name="" id="" />
+        <input type="datetime-local" name="" id="" /></div>
       </fieldset>
 
       <fieldset>
         <legend>Customer Information</legend>
+        <div class="form-group">
         <label for="">Customer Name</label>
-        <input type="text" name="" aria-label="Customer Name" id="" placeholder="Enter Customer Name" />
+        <input type="text" name="" aria-label="Customer Name" id="" placeholder="Enter Customer Name" /></div>
 
+        <div class="form-group">
         <label for="">Customer Phone</label>
-    <input type="tel" name="" aria-label="Customer Phone" id="" placeholder="+256xxxxxxxxx" />
+    <input type="tel" name="" aria-label="Customer Phone" id="" placeholder="+256xxxxxxxxx" /></div>
 
+    <div class="form-group">
         <label for="">Customer Email</label>
-        <input type="email" name="" aria-label="Customer Email" id="" placeholder="customer@example.com" />
+        <input type="email" name="" aria-label="Customer Email" id="" placeholder="customer@example.com" /></div>
 
+        <div class="form-customer">
         <label for="">Customer Type</label>
         <label for="">
           <input type="radio" name="Customer Type" aria-label="Customer Type" value="walk_in" required />
@@ -44,13 +65,16 @@
           <input type="radio" name="Customer Type" value="credit_customer" />
           Credit Customer
         </label>
+        </div>
       </fieldset>
 
       <fieldset>
         <legend>Product Information</legend>
-        <label for="">Product Name</label><br>
-        <input name="text" id="" placeholder="eg. TV"></input>
+        <div class="form-group">
+        <label for="">Product Name</label>
+        <input name="text" id="" placeholder="eg. TV"></input></div>
 
+        <div class="form-group">
         <label for="">Product Category</label>
         <select name="product_category" id="">
           <option value="electronics">Electronics</option>
@@ -58,29 +82,36 @@
           <option value="stationery">Stationery</option>
           <option value="groceries">Groceries</option>
           <option value="other">Other</option>
-        </select>
+        </select></div>
 
+        <div class="form-group">
         <label for="">Quantity Sold</label>
-        <input type="number" name="" id="" />
+        <input type="number" name="" id="" /></div>
 
+        <div class="form-group">
         <label for="">Unit Price</label>
-        <input type="number" name="" id="" step="0.01" />
+        <input type="number" name="" id="" step="0.01" /></div>
 
+        <div class="form-group">
         <label for="">Discount Percentage</label>
-        <input type="number" name="" id="" min="0" max="100" placeholder="0-100" />
+        <input type="number" name="" id="" min="0" max="100" placeholder="0-100" /></div>
 
+        <div class="form-group">
         <label for="">Subtotal</label>
-        <input type="number" name="" id="" readonly />
+        <input type="number" name="" id="" readonly /></div>
 
+        <div class="form-group">
         <label for="">Tax/VAT</label>
-        <input type="number" name="" id="" readonly />
+        <input type="number" name="" id="" readonly /></div>
 
+        <div class="form-group">
         <label for="">Total Amount</label>
-        <input type="number" name="" id="" readonly />
+        <input type="number" name="" id="" readonly /></div>
       </fieldset>
 
       <fieldset>
         <legend>Payment Information</legend>
+        <div class="form-payment">
         <label for="">Payment Method</label>
         <label>
           <input type="radio" name="payment_method" value="Cash" required />
@@ -97,23 +128,28 @@
         <label>
           <input type="radio" name="payment_method" value="credit" />
           Credit
-        </label>
+        </label></div>
 
+        <div class="form-group">
         <label for="">Amout Paid</label>
-        <input type="number" />
+        <input type="number" /></div>
 
+        <div class="form-group">
         <label for="">Balance</label>
-        <input type="number" name="" id="" readonly />
+        <input type="number" name="" id="" readonly /></div>
 
+        <div class="form-group">
         <label for="">Sales Person</label>
-        <input type="text" name="" id="" />
+        <input type="text" name="" id="" /></div>
 
+        <div class="form-group">
         <label for="">Additional Notes</label>
-        <textarea name="" id="" placeholder="Additional Notes"></textarea>
+        <textarea name="" id="" placeholder="Additional Notes"></textarea></div>
       </fieldset>
 
-      <button type="submit">Submit Sale</button>
-      <button type="submit">Clear Form</button>
+      <button type="submit" class="btn">Submit Sale</button>
+      <button type="submit" class="btn">Clear Form</button>
     </form>
+    </div>
   </body>
 </html>
