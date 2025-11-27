@@ -1,155 +1,196 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sales Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> 
-    <link rel="stylesheet" href="./css/sales.css">
-  </head>
-  <body>
-    <!-- Sales Entry Form  -->
-     <div class="bg"></div>
-  
-     <div class="form-container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Page</title>
+
+  <!-- Importing Google Poppins font for clean and modern text styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Importing Font Awesome library for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Linking external CSS file to style the Sales Entry Form -->
+  <link rel="stylesheet" href="./css/sales.css">
+</head>
+
+
+<body>
+  <!-- Background overlay -->
+  <div class="bg"></div>
+
+  <!-- Sales Entry Form  -->
+  <div class="form-container">
     <h1>Sales Entry Form <i class="fa-solid fa-basket-shopping"></i></h1>
-       <div class="page-link">
+
+    <!-- Navigation link to Procurement Page -->
+    <div class="page-link">
       <a href="procurement.html">Go to Procurement page <i class="fa-solid fa-arrow-right"></i></a>
-     </div> 
+    </div>
     <form action="">
+
+      <!-- Sales Information: ID & Date -->
+      <!-- Fieldset groups related form inputs together -->
       <fieldset>
         <legend>Sales Information</legend>
 
 
-<div class="form-group">
-        <label for="">Sale ID</label>
-        <input type="text" name="" id="" readonly /></div>
+        <div class="form-group">
+          <label for="">Sale ID</label>
+          <input type="text" name="" id="" readonly />
+        </div> <!-- not editable by the user -->
 
         <div class="form-group">
-        <label for="">Sale Date & Time</label>
-        <input type="datetime-local" name="" id="" /></div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Customer Information</legend>
-        <div class="form-group">
-        <label for="">Customer Name</label>
-        <input type="text" name="" aria-label="Customer Name" id="" placeholder="Enter Customer Name" /></div>
-
-        <div class="form-group">
-        <label for="">Customer Phone</label>
-    <input type="tel" name="" aria-label="Customer Phone" id="" placeholder="+256xxxxxxxxx" /></div>
-
-    <div class="form-group">
-        <label for="">Customer Email</label>
-        <input type="email" name="" aria-label="Customer Email" id="" placeholder="customer@example.com" /></div>
-
-        <div class="form-customer">
-        <label for="">Customer Type</label>
-        <label for="">
-          <input type="radio" name="Customer Type" aria-label="Customer Type" value="walk_in" required />
-          Walk-in
-        </label>
-
-        <label for="">
-          <input type="radio" name="Customer Type" value="regular" />
-          Regular
-        </label>
-
-        <label for="">
-          <input type="radio" name="Customer Type" value="credit_customer" />
-          Credit Customer
-        </label>
+          <label for="">Sale Date & Time</label>
+          <input type="datetime-local" name="" id="" />
         </div>
       </fieldset>
 
+
+      <!-- Customer Information: Name, contact & type -->
+      <fieldset>
+        <legend>Customer Information</legend>
+        <div class="form-group">
+          <label for="">Customer Name</label>
+          <input type="text" name="" aria-label="Customer Name" id="" placeholder="Enter Customer Name" />
+        </div> <!-- screen reader users mainly used by people who are blind -->
+
+
+        <div class="form-group">
+          <label for="">Customer Phone</label>
+          <input type="tel" name="" aria-label="Customer Phone" id="" placeholder="+256xxxxxxxxx" />
+        </div>
+
+        <div class="form-group">
+          <label for="">Customer Email</label>
+          <input type="email" name="" aria-label="Customer Email" id="" placeholder="customer@example.com" />
+        </div>
+
+        <div class="form-payment">
+          <label for="">Customer Type</label>
+          <!-- Radio buttons for selecting payment method: only one can be chosen -->
+          <label>
+            <input type="radio" name="Customer Type" aria-label="Customer Type" value="walk_in" required />
+            <!--this field can't be blank -->
+            Walk-in
+          </label>
+
+          <label>
+            <input type="radio" name="Customer Type" value="regular" />
+            Regular
+          </label>
+
+          <label>
+            <input type="radio" name="Customer Type" value="credit_customer" />
+            Credit Customer
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Product Information: product name, category, quantity & pricing -->
       <fieldset>
         <legend>Product Information</legend>
         <div class="form-group">
-        <label for="">Product Name</label>
-        <input name="text" id="" placeholder="eg. TV"></input></div>
+          <label for="">Product Name</label>
+          <input name="text" id="" placeholder="eg. TV"></input>
+        </div>
 
         <div class="form-group">
-        <label for="">Product Category</label>
-        <select name="product_category" id="">
-          <option value="electronics">Electronics</option>
-          <option value="furniture">Furniture</option>
-          <option value="stationery">Stationery</option>
-          <option value="groceries">Groceries</option>
-          <option value="other">Other</option>
-        </select></div>
+          <label for="">Product Category</label>
+          <select name="product_category" id="">
+            <option value="electronics">Electronics</option>
+            <option value="furniture">Furniture</option>
+            <option value="stationery">Stationery</option>
+            <option value="groceries">Groceries</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
 
         <div class="form-group">
-        <label for="">Quantity Sold</label>
-        <input type="number" name="" id="" /></div>
+          <label for="">Quantity Sold</label>
+          <input type="number" name="" id="" />
+        </div>
 
         <div class="form-group">
-        <label for="">Unit Price</label>
-        <input type="number" name="" id="" step="0.01" /></div>
+          <label for="">Unit Price</label>
+          <input type="number" name="" id="" step="0.01" />
+        </div> <!-- 2 decimals places eg. 1.23 -->
 
         <div class="form-group">
-        <label for="">Discount Percentage</label>
-        <input type="number" name="" id="" min="0" max="100" placeholder="0-100" /></div>
+          <label for="">Discount Percentage</label>
+          <input type="number" name="" id="" min="0" max="100" placeholder="0-100" />
+        </div> <!-- the allowed range of values a user can enter -->
 
         <div class="form-group">
-        <label for="">Subtotal</label>
-        <input type="number" name="" id="" readonly /></div>
+          <label for="">Subtotal</label>
+          <input type="number" name="" id="" readonly /> <!-- Auto-calculated field -->
+        </div>
 
         <div class="form-group">
-        <label for="">Tax/VAT</label>
-        <input type="number" name="" id="" readonly /></div>
+          <label for="">Tax/VAT</label>
+          <input type="number" name="" id="" readonly />
+        </div>
 
         <div class="form-group">
-        <label for="">Total Amount</label>
-        <input type="number" name="" id="" readonly /></div>
+          <label for="">Total Amount</label>
+          <input type="number" name="" id="" readonly />
+        </div>
       </fieldset>
 
+      <!-- Payment Information: method, amount, balance, sales person, & additional notes -->
       <fieldset>
         <legend>Payment Information</legend>
         <div class="form-payment">
-        <label for="">Payment Method</label>
-        <label>
-          <input type="radio" name="payment_method" value="Cash" required />
-          Cash
-        </label>
-        <label>
-          <input type="radio" name="payment_method" value="Mobile" />
-          Mobile Money
-        </label>
-        <label>
-          <input type="radio" name="payment_method" value="card" />
-          Card
-        </label>
-        <label>
-          <input type="radio" name="payment_method" value="credit" />
-          Credit
-        </label></div>
+          <label for="">Payment Method</label>
+          <label>
+            <input type="radio" name="payment_method" value="Cash" required />
+            Cash
+          </label>
+          <label>
+            <input type="radio" name="payment_method" value="Mobile" />
+            Mobile Money
+          </label>
+          <label>
+            <input type="radio" name="payment_method" value="card" />
+            Card
+          </label>
+          <label>
+            <input type="radio" name="payment_method" value="credit" />
+            Credit
+          </label>
+        </div>
 
         <div class="form-group">
-        <label for="">Amout Paid</label>
-        <input type="number" /></div>
+          <label for="">Amount Paid</label>
+          <input type="number" />
+        </div>
 
         <div class="form-group">
-        <label for="">Balance</label>
-        <input type="number" name="" id="" readonly /></div>
+          <label for="">Balance</label>
+          <input type="number" name="" id="" readonly />
+        </div>
 
         <div class="form-group">
-        <label for="">Sales Person</label>
-        <input type="text" name="" id="" /></div>
+          <label for="">Sales Person</label>
+          <input type="text" name="" id="" />
+        </div>
 
         <div class="form-group">
-        <label for="">Additional Notes</label>
-        <textarea name="" id="" placeholder="Additional Notes"></textarea></div>
+          <label for="">Additional Notes</label>
+          <textarea name="" id="" placeholder="Additional Notes" style="height: 120px;"></textarea>
+        </div> <!-- Inline CSS: increase height of textarea -->
       </fieldset>
 
+      <!-- Form action buttons: Submit form or clear all fields -->
       <button type="submit" class="btn">Submit Sale</button>
-      <button type="submit" class="btn">Clear Form</button>
+      <button type="reset" class="btn">Clear Form</button>
     </form>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
